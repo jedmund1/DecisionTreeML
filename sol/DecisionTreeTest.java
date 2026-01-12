@@ -17,17 +17,8 @@ import java.util.List;
  * A class containing the tests for methods in the TreeGenerator and Dataset classes
  */
 public class DecisionTreeTest {
-    //TODO: Write more unit and system tests! Some basic guidelines that we will be looking for:
-    // 1. Small unit tests on the Dataset class testing the IDataset methods - Done
-    // 2. Small unit tests on the TreeGenerator class that test the ITreeGenerator methods
-    // 3. Tests on your own small dataset (expect 70% accuracy on testing data, 95% on training data)
-    // 4. Test on the villawins dataset (expect 70% accuracy on testing data, 95% on training data)
-    // 5. Tests on the mushrooms dataset (expect 70% accuracy on testing data, 95% on training data)
-    // Feel free to write more unit tests for your own helper methods -- more details can be found in the handout!
-
-    //1.
-    String trainingPath = "data/animals.csv"; // TODO: replace with your own input file
-    String targetAttribute = "Type"; // TODO: replace with your own target attribute
+    String trainingPath = "data/animals.csv";
+    String targetAttribute = "Type"; 
     TreeGenerator testGenerator;
     Dataset training;
     Row eagle;
@@ -35,30 +26,6 @@ public class DecisionTreeTest {
     List<String> attributeList;
     List<Row> dataObjects;
     Dataset dataset;
-    /**
-     * This test shows syntax for a basic assertEquals assertion -- can be deleted
-     */
-    @Test
-    public void testAssertEqual() {
-        assertEquals(2, 1 + 1);
-    }
-
-    /**
-     * This test shows syntax for a basic assertTrue assertion -- can be deleted
-     */
-    @Test
-    public void testAssertTrue() {
-        assertTrue(true);
-    }
-
-    /**
-     * This test shows syntax for a basic assertFalse assertion -- can be deleted
-     */
-    @Test
-    public void testAssertFalse() {
-        assertFalse(false);
-    }
-
 
 
 
@@ -74,8 +41,6 @@ public class DecisionTreeTest {
         this.training = new Dataset(attributeList, dataObjects, AttributeSelection.ASCENDING_ALPHABETICAL);
         // builds a TreeGenerator object and generates a tree for "foodType"
         this.testGenerator = new TreeGenerator();
-//        TODO: Uncomment this once you've implemented generateTree
-//        this.testGenerator.generateTree(training, this.targetAttribute);
         this.eagle = new Row("test row (eagle)");
         this.eagle.setAttributeValue("Legs", "2");
         this.eagle.setAttributeValue("Habitat", "Air");
