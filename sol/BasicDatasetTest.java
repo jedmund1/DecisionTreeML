@@ -17,10 +17,8 @@ import org.junit.Before;
  * A class to test basic decision tree functionality on a basic training dataset
  */
 public class BasicDatasetTest {
-    // IMPORTANT: for this filepath to work, make sure the project is open as the top-level directory in IntelliJ
-    // (See the first yellow information box in the handout testing section for details)
-    String trainingPath = "data/animals.csv"; // TODO: replace with your own input file
-    String targetAttribute = "Type"; // TODO: replace with your own target attribute
+    String trainingPath = "data/animals.csv"; 
+    String targetAttribute = "Type";
     TreeGenerator testGenerator;
     Dataset training;
     Row eagle;
@@ -39,7 +37,6 @@ public class BasicDatasetTest {
         this.training = new Dataset(attributeList, dataObjects, AttributeSelection.ASCENDING_ALPHABETICAL);
         // builds a TreeGenerator object and generates a tree for "foodType"
         this.testGenerator = new TreeGenerator();
-//        TODO: Uncomment this once you've implemented generateTree
 //        this.testGenerator.generateTree(this.training, this.targetAttribute);
         this.eagle = new Row("test row (eagle)");
         this.eagle.setAttributeValue("Legs", "2");
@@ -57,20 +54,15 @@ public class BasicDatasetTest {
     @Test
     public void testClassification() {
         // makes a new (partial) Row representing the tangerine from the example
-        // TODO: make your own rows based on your dataset
         Row eagle = new Row("test row (eagle)");
         eagle.setAttributeValue("Legs", "2");
         eagle.setAttributeValue("Habitat", "Air");
         eagle.setAttributeValue("Diet", "Carnivore");
-        // TODO: make your own assertions based on the expected classifications
-        // TODO: Uncomment this once you've implemented getDecision
 //       Assert.assertEquals("Bird", this.testGenerator.getDecision(eagle));
         Row bass = new Row("test row (bass)");
         bass.setAttributeValue("Legs", "0");
         bass.setAttributeValue("Habitat", "Water");
         bass.setAttributeValue("Diet", "Omnivore");
-        // TODO: make your own assertions based on the expected classifications
-        // TODO: Uncomment this once you've implemented getDecision
 //        Assert.assertEquals("Fish", this.testGenerator.getDecision(bass));
 
     }
