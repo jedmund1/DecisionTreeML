@@ -189,7 +189,7 @@ public class DecisionTreeTester<G extends ITreeGenerator<D>, D extends IDataset>
      * Calculates the average accuracy of the decision tree on the mushrooms dataset
      * @param args
      */
-//    TODO: Uncomment this when you are ready to test your implementation!
+
     public static void main(String[] args) {
         DecisionTreeTester<TreeGenerator, Dataset> tester;
         try {
