@@ -1,0 +1,11 @@
+Legs,Habitat,Diet,Type
+4,Land,Omnivore,Mammal
+4,Land,Carnivore,Mammal
+2,Air,Carnivore,Bird
+0,Water,Omnivore,Fish
+4,Water,Carnivore,Amphibian
+2,Land,Herbivore,Mammal
+2,Air,Herbivore,Bird
+4,Water,Omnivore,Reptile
+0,Land,Carnivore,Reptile
+2,Air,Carnivore,Bird
